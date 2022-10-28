@@ -2,6 +2,8 @@ const express = require('express')
 
 const app = express()
 
+port = process.env.PORT || 80
+
 app.use(express.json())
 
 function getRandomArbitrary(min = 0, max = 100) {
@@ -25,4 +27,4 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(8000, () => console.log('Run...'))
+app.listen(port, () => console.log('Run...'))
